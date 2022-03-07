@@ -1,0 +1,31 @@
+Initial state, s0
+possible actions, scores 
+Initial low-level heuristics{ALLC, ALLD, TFT,...), {h1, h2, h3,...}
+
+if(all heuristics scores are 0)
+      invoke each heuristic using current solution and
+      record fitness change as it score.
+
+set value for t, temperature
+set value for k, Boltzmann's constant
+set value for c, reduction factor
+
+loop(for / while do) till end of game condition is reached
+    loop through heuristics
+        compare and select new solution 
+            if new selction better than current solution
+                use new solution
+            else
+                calculate the difference d of both solutions
+                if r > exp d*t*k
+                    use new solution
+                else 
+                    use current solution
+                end if
+            end if
+        set current solution to the solution used above
+    end loop
+end loop
+                
+                
+    
